@@ -1,0 +1,9 @@
+1) No it does not change the varaible a after the function call. The variable a remains the same value (32) after the
+function is called. Since the variable a is passed by value it does not modify the passed variable and we are left
+with just the original value of a.
+2) Since the array being passed to the second function is defaulted to pass by refernce (based on element) then in our
+increment function we are able to increment the first element in the array using the function.
+3) They differ due to the way the two variables are passed. When b is set equal to the list ([32]) it is passing the whole array 
+to the function which in retrospect is passing by reference. That is why it will alter the variable outside of the function.
+However, a is one value that is being passed to the function as a value and therefore when the first incremenet
+function is called it will not increment a at all. 
