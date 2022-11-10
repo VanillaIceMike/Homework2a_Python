@@ -1,7 +1,13 @@
 def sort_dictionary(dict):
-	sortedByAgeList = sorted(dict.items(), key = lambda x: x[1][1])
-	finalListofTup = []
-
-	for a, b, in sortedByAgeList:
-		finalListofTup.append((a, b[0]))
-	return finalListofTup
+    dictlist=list(dict.items())
+    l=len(dictlist)
+    finalListofTup = []
+	for i in range(l - 1):
+		for j in range(i + 1, l):
+			if (dictlist[i][1] > dictlist[j][1]):
+				t = dictlist[i]
+				dictlist[i] = dictlist[j]
+				dictlist[j]=t
+		for a, b, in dictlist:
+			finalListofTup.append((a, b[0]))
+		return finalListofTup

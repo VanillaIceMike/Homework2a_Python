@@ -4,5 +4,5 @@ def timeme(func):
 		start = time.time()
 		func()
 		finish = time.time()
-		print("Total time ", finish - start)
+		print(f"Total time {finish - start}")
 	return decorator
