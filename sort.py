@@ -4,10 +4,10 @@ def sort_dictionary(dict):
     finalListofTup = []
     for i in range(l - 1):
         for j in range(i + 1, l):
-            if (dictlist[i][1] > dictlist[j][1]):
+            if (dictlist[i][1][1] > dictlist[j][1][1]):
                 t = dictlist[i]
                 dictlist[i] = dictlist[j]
-                dictlist[j]=t
-        for a, b, in dictlist:
-            finalListofTup.append((a, b[0]))
-        return finalListofTup
+                dictlist[j] = t
+    for a, b, in dictlist:
+        finalListofTup.append((a, b[0]))
+    return finalListofTup
